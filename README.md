@@ -5,7 +5,7 @@
     Run the below command to create the nodes gs,hsbc and mas specfied by the option `-n gs,hsbc,mas` 
     The command expected the node config directory specified by the option `-d /mnt/linux-data/apps/corda/nodes` 
     
-    ```bash
+    ```
         ./create-node.sh -n gs,hsbc,mas -d /mnt/linux-data/apps/corda/nodes
     ```
 
@@ -27,14 +27,14 @@
 
     On running the below command the mas node is started 
 
-    ```bash
+    ```
         ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes
     ``` 
 
     The script copies any cordapp in the `cordapps` folder to all the nodes before starting the nodes
     
     In case the app requires the schema to be updated first run with the below commands
-    ```bash
+    ```
         ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes -m 1
         ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes
     ```
