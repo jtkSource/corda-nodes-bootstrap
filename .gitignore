@@ -3,6 +3,6 @@ nodes/gs/**
 nodes/hsbc/**
 nodes/mas/**
 corda-tools-network-bootstrapper-4.9.jar
-**/*.jar
+drivers/*.jar
 .idea/*
 **/*.log
