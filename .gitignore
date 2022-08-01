@@ -5,3 +5,4 @@ nodes/mas/**
 corda-tools-network-bootstrapper-4.9.jar
 **/*.jar
 .idea/*
+**/*.log
