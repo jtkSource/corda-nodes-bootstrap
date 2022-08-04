@@ -38,3 +38,26 @@
         ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes -m 1
         ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes
     ```
+
+## Demo
+
+The default setup of the nodes are as below: 
+
+- **Observer**
+  This node keeps track of all assets on the network
+  Its is the responsibility of the participating node to send notifications  to the observer when a new assets are being created / destroyed and/or payouts occur on the assets
+  In our demo we have take the MAS as the observer
+
+- **Notary**
+  This node is responsible for notarizig all transaction and can perform extra validations
+  on the transaction
+  In our demo SGX is the notary node
+
+- **Banks**
+  These are nodes that participate in the buy/selling and creation of assets
+  The banks configured are
+  - Goldman Sachs
+  - HSBC
+- **Central Bank**
+  This node is responsible for issuing digital currencies token and to uphold the value of the token against the fiat
+  The main role of the Central bank is to hold collateral to various parties and issue currency tokens for the nodes to participate in sale of digital assets
