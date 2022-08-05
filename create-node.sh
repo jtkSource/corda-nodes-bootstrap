@@ -4,6 +4,8 @@ NODES="node1"
 BASEFOLDER=$(pwd)
 DELETENODE=0
 CORDA_VERSION=4.9
+CORDA_TOKEN_VERSION=1.2
+
 while getopts ':h:n:d:x:' option; do
    case $option in
       h) # display Help
@@ -45,6 +47,17 @@ if [ ! -f drivers/postgresql-42.4.0.jar ]; then
    echo "Downloading postgresql-42.4.0.jar..."
    wget -P drivers https://jdbc.postgresql.org/download/postgresql-42.4.0.jar
 fi
+
+if [ ! -f cordapps/tokens-contracts-${CORDA_TOKEN_VERSION}.jar ]; then 
+   echo "Downloading tokens-contracts-${CORDA_TOKEN_VERSION}.jar..."
+   wget -P cordapps https://software.r3.com/artifactory/corda-lib/com/r3/corda/lib/tokens/tokens-contracts/${CORDA_TOKEN_VERSION}/tokens-contracts-${CORDA_TOKEN_VERSION}.jar
+fi
+
+if [ ! -f -f cordapps/tokens-workflows-${CORDA_TOKEN_VERSION}.jar ]; then 
+   echo "Downloading tokens-workflows-${CORDA_TOKEN_VERSION}.jar..."
+   wget -P cordapps https://software.r3.com/artifactory/corda-lib/com/r3/corda/lib/tokens/tokens-workflows/${CORDA_TOKEN_VERSION}/tokens-workflows-${CORDA_TOKEN_VERSION}.jar
+fi
+
 
 for NODE in "${NODES[@]}"
    do

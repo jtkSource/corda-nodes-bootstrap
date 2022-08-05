@@ -41,7 +41,7 @@
 
 ## Demo
 
-The default setup of the nodes are as below: 
+The default setup of the nodes are as below:
 
 - **Observer**
   This node keeps track of all assets on the network
@@ -61,3 +61,10 @@ The default setup of the nodes are as below:
 - **Central Bank**
   This node is responsible for issuing digital currencies token and to uphold the value of the token against the fiat
   The main role of the Central bank is to hold collateral to various parties and issue currency tokens for the nodes to participate in sale of digital assets
+
+```bash
+  start CreateAndIssueTerm bondName: JTK, couponPaymentLeft: 100, interestRate: 5, purchasePrice: 250, unitsAvailable: 100, maturityDate: 20230810, bondType: GB, currency: SGD, creditRating: AAA
+
+  start CreateAndIssueTerm bondName: FIRST-STREET, couponPaymentLeft: 100, interestRate: 6.7, purchasePrice: 34.5, unitsAvailable: 1000, maturityDate: 20250810, bondType: GB, currency: SGD, creditRating: AA+
+
+```
