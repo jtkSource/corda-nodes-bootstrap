@@ -53,7 +53,7 @@ if [ ! -f cordapps/tokens-contracts-${CORDA_TOKEN_VERSION}.jar ]; then
    wget -P cordapps https://software.r3.com/artifactory/corda-lib/com/r3/corda/lib/tokens/tokens-contracts/${CORDA_TOKEN_VERSION}/tokens-contracts-${CORDA_TOKEN_VERSION}.jar
 fi
 
-if [ ! -f -f cordapps/tokens-workflows-${CORDA_TOKEN_VERSION}.jar ]; then 
+if [ ! -f cordapps/tokens-workflows-${CORDA_TOKEN_VERSION}.jar ]; then 
    echo "Downloading tokens-workflows-${CORDA_TOKEN_VERSION}.jar..."
    wget -P cordapps https://software.r3.com/artifactory/corda-lib/com/r3/corda/lib/tokens/tokens-workflows/${CORDA_TOKEN_VERSION}/tokens-workflows-${CORDA_TOKEN_VERSION}.jar
 fi
