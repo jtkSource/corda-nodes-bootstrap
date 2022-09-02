@@ -1,18 +1,22 @@
+REASSIGN OWNED BY citi TO postgres;  -- or some other trusted role
+DROP OWNED BY citi;
 
-REASSIGN OWNED BY gs TO admin;  -- or some other trusted role
+REASSIGN OWNED BY gs TO postgres;  -- or some other trusted role
 DROP OWNED BY gs;
 
-REASSIGN OWNED BY cb TO admin;  -- or some other trusted role
+REASSIGN OWNED BY cb TO postgres;  -- or some other trusted role
 DROP OWNED BY cb;
 
-REASSIGN OWNED BY hsbc TO admin;  -- or some other trusted role
+REASSIGN OWNED BY hsbc TO postgres;  -- or some other trusted role
 DROP OWNED BY hsbc;
 
-REASSIGN OWNED BY mas TO admin;  -- or some other trusted role
+REASSIGN OWNED BY mas TO postgres;  -- or some other trusted role
 DROP OWNED BY mas;
 
-REASSIGN OWNED BY notary TO admin;  -- or some other trusted role
+REASSIGN OWNED BY notary TO postgres;  -- or some other trusted role
 DROP OWNED BY notary;
+
+drop role if exists citi;
 
 drop role if exists gs;
 
