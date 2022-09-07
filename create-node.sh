@@ -5,6 +5,7 @@ BASEFOLDER=$(pwd)
 DELETENODE=0
 CORDA_VERSION=4.9
 CORDA_TOKEN_VERSION=1.2
+CI_WORKFLOWS_VERSION=1.1
 
 while getopts ':h:n:d:x:' option; do
    case $option in
@@ -58,6 +59,10 @@ if [ ! -f cordapps/tokens-workflows-${CORDA_TOKEN_VERSION}.jar ]; then
    wget -P cordapps https://software.r3.com/artifactory/corda-lib/com/r3/corda/lib/tokens/tokens-workflows/${CORDA_TOKEN_VERSION}/tokens-workflows-${CORDA_TOKEN_VERSION}.jar
 fi
 
+if [ ! -f cordapps/ci-workflows-${CI_WORKFLOWS_VERSION}.jar ]; then 
+   echo "Downloading tokens-workflows-${CORDA_TOKEN_VERSION}.jar..."
+   wget -P cordapps https://software.r3.com/artifactory/corda-lib/com/r3/corda/lib/ci/ci-workflows/${CI_WORKFLOWS_VERSION}/ci-workflows-${CI_WORKFLOWS_VERSION}.jar
+fi
 
 for NODE in "${NODES[@]}"
    do

@@ -6,7 +6,7 @@
     The command expected the node config directory specified by the option `-d /mnt/linux-data/apps/corda/nodes` 
     
     ```
-        ./create-node.sh -n gs,hsbc,mas -d /mnt/linux-data/apps/corda/nodes
+        ./create-node.sh -n gs,hsbc,citi,mas,cb,sgx -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
     ```
 
     Then node configs are of the format `gs_node.conf` where `gs` specifices the node give in the `-n` option
