@@ -28,15 +28,15 @@
     On running the below command the mas node is started 
 
     ```
-        ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes
+        ./start-node.sh -n mas -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
     ``` 
 
     The script copies any cordapp in the `cordapps` folder to all the nodes before starting the nodes
     
     In case the app requires the schema to be updated first run with the below commands
     ```
-        ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes -m 1
-        ./start-node.sh -n mas -d /mnt/linux-data/apps/corda/nodes
+        ./start-node.sh -n mas -d /mnt/data/workspace/corda-nodes-bootstrap/nodes -m 1
+        ./start-node.sh -n mas -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
     ```
 
 ## Demo

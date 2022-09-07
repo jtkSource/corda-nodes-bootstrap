@@ -39,10 +39,10 @@ for NODE in "${NODES[@]}"
          echo " DB Migration node ${NODE} in ${NODEFOLDER}..."
          cd $NODEFOLDER && $JAVA_HOME/bin/java -jar corda.jar \
            run-migration-scripts --app-schemas --core-schemas
+         echo "Done DB Migration node ${NODE}..."
         else
          echo " Starting node ${NODE} in ${NODEFOLDER}..."
          cd $NODEFOLDER && $JAVA_HOME/bin/java -jar corda.jar
-      fi
-      
-      echo "Done Starting node ${NODE}..."  
+         echo "Done Starting node ${NODE}..."
+      fi      
 done
