@@ -12,10 +12,13 @@ The command expected the node config directory specified by the option `-d /mnt/
 Then node configs are of the format `gs_node.conf` where `gs` specifices the node give in the `-n` option
 
 ```shell
-    nodes
-    ├── gs_node.conf
-    ├── hsbc_node.conf
-    └── mas_node.conf
+nodes
+├── cb_node.conf
+├── citi_node.conf
+├── gs_node.conf
+├── hsbc_node.conf
+├── mas_node.conf
+└── sgx_node.conf
 
 ```
 
