@@ -28,12 +28,7 @@
     On running the below command the mas node is started 
 
     ```shell
-        ./start-node.sh -n mas -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
-        ./start-node.sh -n sgx -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
-        ./start-node.sh -n cb -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
-        ./start-node.sh -n gs -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
-        ./start-node.sh -n hsbc -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
-        ./start-node.sh -n citi -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
+        ./start-node.sh -n mas,sgx,cb,gs,hsbc,citi -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
     ``` 
 
     The script copies any cordapp in the `cordapps` folder to all the nodes before starting the nodes
@@ -59,9 +54,17 @@
       p - port
       l - RPC user to login
     ```
+
+    ### Shutdown
+
+    To shutdown the node, ssh into the node and run the below command
+
+    ```shell
+      run gracefulShutdown
+      run shutdown
+    ```
     
     In case the app requires the schema to be updated first run with the below commands
-
     ```
         ./start-node.sh -n mas -d /mnt/data/workspace/corda-nodes-bootstrap/nodes -m 1
         ./start-node.sh -n mas -d /mnt/data/workspace/corda-nodes-bootstrap/nodes
