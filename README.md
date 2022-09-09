@@ -23,6 +23,13 @@ On running the command the required nodes folder are created under the same fold
 The application is currently configured for postgreSQL DB
 Ensure the sql commands of the respective nodes are executed before creating the nodes in `nodes-sql` folder
 
+
+In case the app requires the schema to be updated first run with the below command
+```
+    ./start-node.sh -n mas,sgx,cb,gs,hsbc,citi -d /mnt/data/workspace/corda-nodes-bootstrap/nodes -m 1
+```
+
+
 ## Run the nodes
 
 On running the below command the mas node is started 
@@ -55,6 +62,10 @@ You can login to the server using ssh
   l - RPC user to login
 ```
 
+## Commands
+
+[node shell commands](https://docs.r3.com/en/platform/corda/4.9/community/shell.html#node-shell-commands)
+
 ### Shutdown
 
 To shutdown the node, ssh into the node and run the below command
@@ -62,11 +73,4 @@ To shutdown the node, ssh into the node and run the below command
 ```shell
   run gracefulShutdown
   run shutdown
-```
-[Node Shell Commands](https://docs.r3.com/en/platform/corda/4.9/community/shell.html#node-shell-commands)
-
-
-In case the app requires the schema to be updated first run with the below commands
-```
-    ./start-node.sh -n mas,sgx,cb,gs,hsbc,citi -d /mnt/data/workspace/corda-nodes-bootstrap/nodes -m 1
 ```
