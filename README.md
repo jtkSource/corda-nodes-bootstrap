@@ -49,7 +49,7 @@ You can login to the server using ssh
   ssh -p 2213 localhost -l sgx
   #mas - observer
   ssh -p 2203 localhost -l corda
-  #cb
+  # Central Bank
   ssh -p 2211 localhost -l corda
   #gs
   ssh -p 2209 localhost -l corda
