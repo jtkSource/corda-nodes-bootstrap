@@ -1,6 +1,6 @@
 # DEV Corda cluster
 
-## Prepare the nodes
+## Node Preparation
 
 Run the below command to create the nodes gs,hsbc and mas specfied by the option `-n gs,hsbc,mas` 
 The command expected the node config directory specified by the option `-d /mnt/linux-data/apps/corda/nodes` 
@@ -30,7 +30,7 @@ In case the app requires the schema to be updated first run with the below comma
 ```
 
 
-## Run the nodes
+## Running Nodes
 
 On running the below command the mas node is started 
 
