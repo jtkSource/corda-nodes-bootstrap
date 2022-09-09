@@ -42,7 +42,8 @@ for NODE in "${NODES[@]}"
          echo "Done DB Migration node ${NODE}..."
         else
          echo " Starting node ${NODE} in ${NODEFOLDER}..."
-         cd $NODEFOLDER && $JAVA_HOME/bin/java -jar corda.jar
+         cd $NODEFOLDER
+         nohup $JAVA_HOME/bin/java -jar corda.jar --no-local-shell &
          echo "Done Starting node ${NODE}..."
-      fi      
+      fi
 done
