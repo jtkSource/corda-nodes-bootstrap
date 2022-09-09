@@ -9,4 +9,4 @@ corda-tools-network-bootstrapper-4.9.jar
 drivers/*.jar
 .idea/*
 **/*.log
-*.log
+**/*.log.gz
